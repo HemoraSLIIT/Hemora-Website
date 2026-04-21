@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemora | Hematological Disease Research Website</title>
+    <meta
+      name="description"
+      content="Hemora is a final-year research project focused on identifying hematological diseases using deep learning, blood smear image processing, and CBC-based hybrid analysis."
+    />
+    <meta
+      property="og:title"
+      content="Hemora | Hematological Disease Research Website"
+    />
+    <meta
+      property="og:description"
+      content="Academic project website for Hemora, a web-based platform for hematological disease identification using blood smear images and CBC data."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="assets/Images/tablogo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="Hemora home">
+          <img
+            class="brand-logo"
+            src="assets/Images/logo2.svg"
+            alt="Hemora logo"
+          />
+          <!-- <span class="brand-copy">
+            <strong>Hemora</strong>
+            <span>Research Project Website</span>
+          </span> -->
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#domain">Domain</a>
+          <a href="#milestones">Milestones</a>
+          <a href="#documents">Documents</a>
+          <a href="#presentations">Presentations</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Deep Learning + Microscopic Blood Smear Analysis</p>
+            <h1>Hemora</h1>
+            <p class="hero-subtitle">
+              Identification of Hematological Diseases using Deep Learning and
+              Microscopic Blood Smear Image Processing
+            </p>
+            <p class="hero-text">
+              Hemora is a public-facing final-year research project focused on
+              automated identification of hematological diseases through blood
+              smear images and Complete Blood Count data. The platform is
+              designed to support faster, more reliable screening in Sri Lankan
+              clinical environments where specialist access may be limited.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#domain">View Domain</a>
+              <a class="button button-secondary" href="#documents"
+                >See Documents</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-orbit orbit-large"></div>
+            <div class="hero-orbit orbit-medium"></div>
+            <div class="hero-orbit orbit-small"></div>
+            <div class="hero-panel">
+              <p>Research Focus</p>
+              <strong>4 Hematological Diseases</strong>
+              <span>Blood smear images + CBC based analysis with multimodel architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="container stat-strip" aria-label="Project highlights">
+          <article class="stat-card">
+            <strong>4</strong>
+            <span>Disease pathways modeled</span>
+          </article>
+          <article class="stat-card">
+            <strong>2</strong>
+            <span>Clinical data sources: smear images + CBC</span>
+          </article>
+          <article class="stat-card">
+            <strong>1</strong>
+            <span>Web-based research platform</span>
+          </article>
+          <article class="stat-card">
+            <strong>SL</strong>
+            <span>Sri Lankan healthcare relevance</span>
+          </article>
+        </div> -->
+      </section>
+
+      <section class="section section-tinted" id="domain">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Domain</p>
+            <h2>Project Scope</h2>
+            <p>
+              Comprehensive overview of our research approach
+            </p>
+          </div>
+
+          <div class="domain-grid">
+            <article class="info-card">
+              <h3>Literature Survey</h3>
+              <p class="justified-text">
+                Hematological diseases remain a major clinical concern, and
+                diagnosis often depends on manual microscopy, CBC interpretation,
+                and expert review. This process can be slow, observer-dependent,
+                and difficult to scale. Recent deep learning methods have shown
+                strong potential in medical image classification, and combining
+                visual smear analysis with CBC parameters can improve decision
+                quality.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Research Gap</h3>
+              <ul>
+                <li>Current workflows are frequently manual and time-consuming.</li>
+                <li>Specialist access is limited in low-resource settings.</li>
+                <li>Many solutions rely on only image data or only CBC data.</li>
+                <li>Sri Lanka-focused hybrid detection systems are limited.</li>
+                <li>Explainable web-ready clinical tools are often missing.</li>
+              </ul>
+            </article>
+
+            <article class="info-card info-card-wide">
+              <h3>Research Problem</h3>
+              <p>
+                Early and accurate diagnosis of hematological diseases remains
+                difficult in low-resource settings due to manual processes,
+                diagnostic delays, limited specialist availability, and lack of
+                scalable automated systems that combine blood smear image
+                analysis with CBC data.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Main Objective</h3>
+              <p class="justified-text">
+                Develop an automated system for identifying hematological
+                diseases using microscopic blood smear image processing and deep
+                learning, with focus on ALL, Beta-Thalassemia Minor, IDA, and
+                SCD.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Sub Objectives</h3>
+              <ul>
+                <li>Detect disease-specific morphological cell patterns.</li>
+                <li>Integrate CBC parameters into hybrid predictions.</li>
+                <li>Evaluate models using local clinical datasets.</li>
+                <li>Deliver a user-friendly web interface for professionals.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="methodology-shell">
+            <div class="section-heading compact">
+              <!-- <p class="section-tag">Methodology</p> -->
+              <h3>Methodology</h3>
+              <p class="justified-text single-line-copy">
+                The methodology includes CBC analysis, image analysis, hybrid decision-making, and result generation.
+              </p>
+              <!-- <p class="justified-text">
+                In parallel, uploaded blood smear images are processed through
+                disease-specific deep learning inference pipelines. The current
+                implementation uses a combination of object-detection and
+                classification models tailored to Acute Lymphoblastic Leukemia,
+                Beta Thalassemia Minor, Iron Deficiency Anemia, and Sickle Cell
+                Disease. When multiple smear images are uploaded for a patient,
+                the system aggregates predictions across images to obtain more
+                stable results. Finally, Hemora combines CBC-derived scores and
+                image-derived predictions through a hybrid scoring layer to
+                produce a final disease risk assessment, annotated visual
+                evidence, and structured diagnostic output.
+              </p> -->
+            </div>
+
+            <div class="pipeline">
+              <article class="pipeline-step">
+                <span>01</span>
+                <h4>User Access and Roles</h4>
+                <p>
+                  Authenticated access is handled through the React frontend and
+                  JWT-protected backend APIs for Admin, Doctor and Lab Technician roles.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>02</span>
+                <h4>Patient Registration</h4>
+                <p>
+                  The platform collects patient details, one or more blood smear
+                  images, and a CBC report file through a structured web form.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>03</span>
+                <h4>CBC Extraction</h4>
+                <p>
+                  CBC reports are processed using pdfplumber first, with OCR
+                  fallback through PyMuPDF and pytesseract for scanned files.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>04</span>
+                <h4>CBC-Based Analysis</h4>
+                <p>
+                  Parsed parameters are validated and scored against
+                  disease-specific rules to compute suspicion levels and matched
+                  clinical criteria.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>05</span>
+                <h4>Disease-Wise Models</h4>
+                <p>
+                  ALL - YOLOv8s + EfficientNetB0<br />
+                  Beta-Thal (Minor) - YOLOv8s + ResNet50<br />
+                  SCD - YOLOv8n + R-CNN<br />
+                  IDA - YOLOv8s + ResNet50
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>06</span>
+                <h4>Image Analysis</h4>
+                <p>
+                  During analysis, the system identifies and marks suspicious
+                  cells, evaluates the overall blood smear image.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>07</span>
+                <h4>Hybrid Decision Layer</h4>
+                <p>
+                  Final disease scoring combines 40% CBC analysis and 60% image
+                  analysis, with CBC-only fallback when image models are
+                  unavailable.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>08</span>
+                <h4>Review and Reporting</h4>
+                <p>
+                  Results are stored, reviewed, re-generated when needed, and
+                  presented with annotated images, doctor feedback, and PDF
+                  report export support.
+                </p>
+              </article>
+              <article class="pipeline-step">
+                <span>09</span>
+                <h4>System Integration</h4>
+                <p>
+                  The complete workflow is deployed as a full-stack platform
+                  using Docker Compose, PostgreSQL, Django services, and the
+                  React frontend.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="technology-block">
+            <div class="section-heading compact">
+              <!-- <p class="section-tag">Technology Stack</p> -->
+              <h3>Tools and Frameworks</h3>
+              <p class="justified-text single-line-copy">
+                Technologies include frontend, backend, AI and image processing, database and deployment, and CBC report extraction tools.
+              </p>
+            </div>
+            <div class="tech-grid" aria-label="Technologies used">
+              <article class="tech-category">
+                <h4>Frontend</h4>
+                <div class="chip-group">
+                  <span>React</span>
+                  <span>Vite</span>
+                  <!-- <span>React Router DOM</span> -->
+                  <!-- <span>Axios</span> -->
+                  <span>Tailwind CSS</span>
+                  <!-- <span>Lucide React</span> -->
+                  <!-- <span>React Hot Toast</span> -->
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>Backend</h4>
+                <div class="chip-group">
+                  <span>Django</span>
+                  <!-- <span>Django REST Framework</span>
+                  <span>SimpleJWT</span>
+                  <span>django-filter</span>
+                  <span>django-cors-headers</span>
+                  <span>drf-yasg</span> -->
+                </div>
+              </article>
+              <article class="tech-category">
+                <h4>Database and Deployment</h4>
+                <div class="chip-group">
+                  <span>PostgreSQL</span>
+                  <span>Docker</span>
+                  <!-- <span>Docker Compose</span>
+                  <span>Nginx</span> -->
+                </div>
+              </article>
+                <article class="tech-category">
+                  <h4>AI and Image Processing</h4>
+                  <div class="chip-group">
+                    <span>OpenCV</span>
+                    <span>PyTorch</span>
+                    <span>TensorFlow / Keras</span>
+                    <!-- <span>Ultralytics YOLO</span>
+                    <span>NumPy</span> -->
+                  </div>
+                </article>
+                <article class="tech-category">
+                  <h4>CBC Report Extraction</h4>
+                  <div class="chip-group">
+                    <span>pdfplumber</span>
+                    <span>PyMuPDF</span>
+                    <span>pytesseract</span>
+                    <span>Tesseract OCR</span>
+                  </div>
+                </article>
+              <!-- <article class="tech-category">
+                <h4>Reporting and Research</h4>
+                <div class="chip-group">
+                  <span>jsPDF</span>
+                  <span>html2canvas</span>
+                  <span>html-to-image</span>
+                  <span>Matplotlib</span>
+                  <span>Seaborn</span>
+                  <span>Jupyter Notebooks</span>
+                </div>
+              </article> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="diseases">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Disease Focus</p>
+            <h2>Four Targeted Hematological Conditions</h2>
+            <p class="single-line-copy">
+              Each disease pathway combines visual morphology cues with CBC
+              indicators to support accurate, practical screening.
+            </p>
+          </div>
+
+          <div class="disease-grid">
+            <article class="disease-card">
+              <p class="disease-code">ALL</p>
+              <h3>Acute Lymphoblastic Leukemia</h3>
+              <p>
+                Focuses on lymphoblast detection from smear images together with
+                parameters such as WBC count and hemoglobin.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">BTM</p>
+              <h3>Beta-Thalassemia Minor</h3>
+              <p>
+                Focuses on microcytosis, hypochromia, and target cells using
+                CBC cues like MCV, MCH, and RBC count.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">SCD</p>
+              <h3>Sickle Cell Disease</h3>
+              <p>
+                Focuses on sickle-shaped RBC identification with supporting CBC
+                features to reduce manual burden.
+              </p>
+            </article>
+            <article class="disease-card">
+              <p class="disease-code">IDA</p>
+              <h3>Iron Deficiency Anemia</h3>
+              <p>
+                Focuses on microcytosis, hypochromia, anisocytosis, and
+                poikilocytosis using hemoglobin, MCV, and MCH.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="milestones">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Milestones</p>
+            <h2>Project Assessments and Progress Tracking</h2>
+            <p>
+              Milestone details include assessment name, date, marks, and status.
+            </p>
+          </div>
+
+          <div class="milestone-toolbar">
+            <label for="milestone-filter">Choose milestone</label>
+            <select id="milestone-filter" name="milestone-filter">
+              <option value="all">All milestones</option>
+              <option value="proposal">Project Proposal</option>
+              <option value="pp1">Progress Presentation 1</option>
+              <option value="pp2">Progress Presentation 2</option>
+              <option value="final">Final Assessment</option>
+              <option value="viva">Viva</option>
+            </select>
+          </div>
+
+          <div class="milestone-list" id="milestone-list">
+            <article class="milestone-card" data-milestone="proposal">
+              <div>
+                <p class="milestone-index">01</p>
+                <h3>Project Proposal</h3>
+                <p>Initial project pitch and research direction review.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Sep 2025</li>
+                <li><strong>Marks:</strong> 10% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="pp1">
+              <div>
+                <p class="milestone-index">02</p>
+                <h3>Progress Presentation 1</h3>
+                <p>Early research and implementation progress review.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Jan 2026</li>
+                <li><strong>Marks:</strong> 15% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="pp2">
+              <div>
+                <p class="milestone-index">03</p>
+                <h3>Progress Presentation 2</h3>
+                <p>Mid-to-late stage progress review and refinements.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> Mar 2026</li>
+                <li><strong>Marks:</strong> 15% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge badge-available milestone-status">Completed</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="final">
+              <div>
+                <p class="milestone-index">04</p>
+                <h3>Final Assessment</h3>
+                <p>Full system and research evaluation.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> May 2026</li>
+                <li><strong>Marks:</strong> 40% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge milestone-status">Pending</span></li>
+              </ul>
+            </article>
+            <article class="milestone-card" data-milestone="viva">
+              <div>
+                <p class="milestone-index">05</p>
+                <h3>Viva</h3>
+                <p>Final oral defense of the completed research project.</p>
+              </div>
+              <ul>
+                <li><strong>Date:</strong> May 2026</li>
+                <li><strong>Marks:</strong> 20% Allocated</li>
+                <li><strong>Status:</strong> <span class="badge milestone-status">Pending</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="documents">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Documents</p>
+            <h2>Project Documents</h2>
+            <p class="single-line-copy">
+              Downloadable documents and finalized research deliverables related to the Hemora project.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Project Charter</h3>
+              <p>Initial scope, planning, and stakeholder document.</p>
+              <a
+                href="assets/Documents/TAF_25-26J-514.pdf"
+                download="Project-Charter-TAF_25-26J-514.pdf"
+                >Download</a
+              >
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Proposal Document</h3>
+              <p>Research proposal containing problem context and methodology.</p>
+              <a
+                href="assets/Documents/Proposal Document.pdf"
+                download="Proposal-Document.pdf"
+                >Download</a
+              >
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Check List Documents</h3>
+              <p>Assessment and submission checklist documents.</p>
+              <a href="#contact">Download ZIP</a>
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Final Report</h3>
+              <p>Main research report and supporting individual reports.</p>
+              <a href="#contact">Download</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="presentations">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Presentations</p>
+            <h2>Slides Used Across Project Assessments</h2>
+            <p>
+              This section keeps room for presentation decks.
+            </p>
+          </div>
+
+          <div class="card-grid compact-grid">
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Proposal Presentation</h3>
+              <p>Initial research introduction and problem framing slides.</p>
+              <a
+                href="assets/Documents/Proposal Presentation.pdf"
+                download="Proposal-Presentation.pdf"
+                >Download</a
+              >
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Progress Presentation 1</h3>
+              <p>Early-stage progress, literature insights, and direction.</p>
+              <a
+                href="assets/Documents/Hemora PP1.pdf"
+                download="Hemora-PP1.pdf"
+                >Download</a
+              >
+            </article>
+            <article class="resource-card">
+              <span class="badge badge-available">Available</span>
+              <h3>Progress Presentation 2</h3>
+              <p>Mid-stage implementation and results update slides.</p>
+              <a
+                href="assets/Documents/Hemora PP2.pdf"
+                download="Hemora-PP2.pdf"
+                >Download</a
+              >
+            </article>
+            <article class="resource-card">
+              <span class="badge">Pending</span>
+              <h3>Final Presentation</h3>
+              <p>Final system, evaluation, and research outcome deck.</p>
+              <a href="#contact">Download</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">About Us</p>
+            <h2>The Team Behind Hemora</h2>
+            <p class="single-line-copy">
+              The Hemora project includes the student research team together
+              with academic and external supervision.
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <img
+                class="team-photo"
+                src="assets/Images/senura.png"
+                alt="Portrait of Aluthge A.D.M.S"
+              />
+              <p class="team-role">ALL Component</p>
+              <h3>Aluthge A.D.M.S</h3>
+              <!-- <p class="team-meta">Registration No: IT22371218</p> -->
+              <p>
+                Responsible for detection and identification of Acute
+                Lymphoblastic Leukemia (ALL). <br />
+                <span class="team-email">Email: movindusenuraaluthge@gmail.com</span>
+              </p>
+            </article>
+            <article class="team-card">
+              <img
+                class="team-photo"
+                src="assets/Images/oshan.png"
+                alt="Portrait of Disanayake R.G.O.S"
+              />
+              <p class="team-role">Beta-Thal Component</p>
+              <h3>Disanayake R.G.O.S</h3>
+              <!-- <p class="team-meta">Registration No: IT22368348</p> -->
+              <p>
+                Responsible for detection and identification of
+                Beta-Thalassemia Minor. <br />
+                <span class="team-email">Email: oshansithuruwan@gmail.com</span>
+              </p>
+            </article>
+            <article class="team-card">
+              <img
+                class="team-photo"
+                src="assets/Images/nisitha.png"
+                alt="Portrait of Dassanayake E.G.N.L"
+              />
+              <p class="team-role">SCD Component</p>
+              <h3>Dassanayake E.G.N.L</h3>
+              <!-- <p class="team-meta">Registration No: IT22361936</p> -->
+              <p>
+                Responsible for detection and identification of Sickle Cell
+                Disease (SCD). <br />
+                <span class="team-email">Email: nisithalakshan94@gmail.com</span>
+              </p>
+            </article>
+            <article class="team-card">
+              <img
+                class="team-photo"
+                src="assets/Images/sayuri.png"
+                alt="Portrait of M.A.S Sachinthanee"
+              />
+              <p class="team-role">IDA Component</p>
+              <h3>M.A.S Sachinthanee</h3>
+              <!-- <p class="team-meta">Registration No: IT22326140</p> -->
+              <p>
+                Responsible for detection and identification of Iron Deficiency
+                  Anemia (IDA). <br />
+                  <span class="team-email">Email: Sayurisachinthanee11@gmail.com</span>
+              </p>
+            </article>
+            <article class="team-card">
+              <p class="team-role">Supervisor</p>
+              <h3>Dinuka R. Wijendra</h3>
+              <p class="team-meta">
+                Senior Lecturer - Higher Grade
+              </p>
+                <p>
+                  <!-- BSc. in IT (Curtin), MSc (UCSC), PhD (UCSC) <br />
+                  Malabe, Sri Lanka <br />
+                  Tel (Direct): +94-117544146 <br />
+                  Mobile: +94-719524253 <br /> -->
+                  Department of IT, Faculty of
+                Computing, Sri Lanka Institute of Information Technology, Malabe, Sri Lanka
+                  <span class="team-email">Email: dinuka.w@sliit.lk</span>
+                </p>
+            </article>
+            <article class="team-card">
+              <p class="team-role">Co-Supervisor</p>
+              <h3>Ms. Jenny Krishara</h3>
+              <p class="team-meta">Lecturer</p>
+                <p>
+                  Faculty of Computing, Sri Lanka Institute of Information
+                  Technology, Malabe, Sri Lanka <br />
+                  <span class="team-email">Email: jenny.k@sliit.lk</span>
+                </p>
+            </article>
+            <article class="team-card">
+              <p class="team-role">External Supervisor</p>
+              <h3>Dr. Deepthi Vidyarathna</h3>
+              <p class="team-meta">Consultant Hematologist</p>
+              <p>
+                External supervisor providing domain expertise and clinical
+                guidance for the Hemora research project.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="section-heading compact left-aligned">
+              <p class="section-tag">Contact Us</p>
+              <h2>Connect with the Project Team</h2>
+              <p>
+                  Contact details for the Hemora project team and academic supervision.
+                </p>
+              </div>
+  
+              <div class="contact-panel">
+                <h3>Get in Touch</h3>
+                <p>
+                  If you have any questions about our research project or wish
+                  to learn more, feel free to contact us.
+                </p>
+                <p class="contact-detail"><strong>Email:</strong> hemoraresearch@gmail.com</p>
+                <p class="contact-detail"><strong>Phone:</strong> +94 70 339 6474</p>
+                <p class="contact-address-block">
+                  <strong>Address:</strong><br />
+                  Sri Lanka Institute of Information Technology,<br />
+                  Malabe,<br />
+                  Sri Lanka.
+                </p>
+              </div>
+            </div>
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            data-endpoint="https://formsubmit.co/ajax/hemoraresearch@gmail.com"
+            novalidate
+          >
+              <input type="hidden" name="_subject" value="Hemora Website Contact Form Submission" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required />
+  
+              <label for="email">Email</label>
+              <input id="email" name="Email Address" type="email" required />
+  
+              <label for="subject">Subject</label>
+              <input id="subject" name="Subject" type="text" required />
+  
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" rows="8" required></textarea>
+
+              <button class="button button-primary" id="send-message-button" type="button">
+                Send Message
+              </button>
+              <p class="form-note" id="form-note" aria-live="polite"></p>
+              </form>
+          </div>
+        </section>
+      </main>
+  
+      <footer class="site-footer">
+        <div class="container footer-shell">
+          <p>Hemora</p>
+          <p>&copy; <span id="year"></span> Hemora. All rights reserved.</p>
+        </div>
+      </footer>
+  
+      <script src="assets/js/script.js"></script>
+    </body>
+  </html>
